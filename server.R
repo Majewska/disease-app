@@ -1,9 +1,9 @@
+############################################################
+#This is the server file for the Macroparasite model by Dobson and Hudson
+#written by Andreas Handel and modified by Ania Majewska
+#last updated 12/28/2017
+############################################################
 
-# This is the server logic for a Shiny web application.
-#  can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
 
 library(shiny)
 

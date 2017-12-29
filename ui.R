@@ -1,9 +1,9 @@
 
-# This is the user-interface definition of a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
+############################################################
+#This is the ui file for the Macroparasite model by Dobson and Hudson
+#written by Andreas Handel and modified by Ania Majewska
+#last updated 12/28/2017
+############################################################
 
 library(shiny)
 
@@ -14,7 +14,7 @@ ui <- fluidPage(
   
   
   div(align = "center"),
-  h1('Macroparasite Model App', align = "center", style = "background-color:#123c66; color:#fff"),
+  h1('Macroparasite Model by Dobson and Hudson', align = "center", style = "background-color:#123c66; color:#fff"),
   
   #section to add buttons
   fluidRow(
@@ -51,15 +51,16 @@ ui <- fluidPage(
                     numericInput("P0", "initial number of adult parasites (P0)", min = 0, max = 10000, value = 200, step = 1)
              ),
              column(6,
-                    numericInput("tmax", "Maximum simulation time (tmax)", min = 1, max = 500, value = 50, step = 1)
+                    numericInput("tmax", "Time", min = 1, max = 500, value = 50, step = 1)
              )
            ), #close fluidRow structure for input 
            fluidRow(
              column(6,
-                    numericInput("a", "Birth rate of host (a)", min = 0.1, max = 5, value = 1.1, step = 0.1  )
-             ),
+                    numericInput("a", "Host birth rate (a)", min = 0.1, max = 5, value = 1.1, step = 0.1)
+             
+                    ),
              column(6,
-                    numericInput("b", "Natural death rate (b)", min = 0.01, max = 5, value = 0.75, step = 0.1  )
+                    numericInput("b", "Host natural death rate (b)", min = 0.01, max = 5, value = 0.75, step = 0.1  )
              )
            ), #close fluidRow structure for input
            fluidRow(
